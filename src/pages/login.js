@@ -3,7 +3,6 @@ import _ from "lodash";
 import { Button, Form, Container, FormGroup, Label, Input } from "reactstrap";
 import axios from "axios";
 import qs from "querystring";
-import{logo} from "../logo.png";
 let axiosconfig = {
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -30,7 +29,7 @@ class Login extends Component {
       password: this.state.password
     };
     console.log(credentials);
-    var url = "http://localhost:5000/login";
+    var url = "https://techm-proj.herokuapp.com/login";
     axios.post(url, qs.stringify(credentials), axiosconfig).then(response => {
       console.log(response.data);
       _.has(response.data, "error")
@@ -43,7 +42,6 @@ class Login extends Component {
   render() {
     return (
       <div>
-      <img src={logo} alt ="scotiabank"/>
         <br />
         <br />
         <Container>

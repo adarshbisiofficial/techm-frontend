@@ -45,7 +45,7 @@ class Signup extends Component {
       empid: this.state.username
     };
     console.log(credentials);
-    var url = "http://localhost:5000/register";
+    var url = "https://techm-proj.herokuapp.com/register";
     axios.post(url, qs.stringify(credentials), axiosconfig).then(response => {
       _.has(response.data, "error")
         ? this.setState({ message: "Invalid Credentials" })

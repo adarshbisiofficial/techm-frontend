@@ -24,7 +24,7 @@ class Home extends Component {
         }
       };
 
-      let url = "http://localhost:5000/current";
+      let url = "https://techm-proj.herokuapp.com/current";
 
       Axios.get(url, axiosconfig).then(response => {
         const { data } = response;

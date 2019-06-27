@@ -4,7 +4,7 @@ import { Spinner, Table, Button } from "reactstrap";
 import { FilePond } from "react-filepond";
 import "filepond/dist/filepond.min.css";
 
-let url = "http://localhost:5000/admin/docs/";
+let url = "https://techm-proj.herokuapp.com/admin/docs/";
 
 class Admin extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class Admin extends Component {
         <h3>Admin</h3>
         <br />
         <br />
-        <FilePond name="avatar" server="http://localhost:5000/validate" />
+        <FilePond name="avatar" server="https://techm-proj.herokuapp.com/validate" />
         {tasksP ? (
           <>
             <Button color="info" onClick={this.switchBack}>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Table, Spinner } from "reactstrap";
 import Axios from "axios";
-let url = "http://localhost:5000/staff";
+let url = "https://techm-proj.herokuapp.com/staff";
 let axiosconfig = {};
 
 class Staff extends Component {

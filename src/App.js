@@ -7,12 +7,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
-import Stylesheet from "./components/stylesheet";
 
 function App() {
   return (
     <div className="App">
-    <Stylesheet/>
       <Container />
       <Router>
         <Route path="/" exact component={Home} />
