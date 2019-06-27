@@ -4,7 +4,6 @@ import { Container } from "reactstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 
-
 //pages
 import Home from "./pages/home";
 import Login from "./pages/login";
@@ -14,7 +13,7 @@ function App() {
   return (
     <div className="App">
     <Helmet>
-      <style>{'body { background-color: #DAE0E2; }'}</style>
+      <style>{'body { background-color: red; }'}</style>
     </Helmet>
       <Container />
       <Router>
@@ -22,6 +21,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
       </Router>
+      
     </div>
   );
 }

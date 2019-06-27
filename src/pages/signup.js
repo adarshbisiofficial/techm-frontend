@@ -3,6 +3,8 @@ import { Button, Form, Container, FormGroup, Label, Input } from "reactstrap";
 import axios from "axios";
 import qs from "querystring";
 import _ from "lodash";
+import "./signup.css";
+import {Helmet} from "react-helmet";
 
 let axiosconfig = {
   headers: {
@@ -56,23 +58,26 @@ class Signup extends Component {
   render() {
     return (
       <div>
+      <Helmet>
+          <style>{'body { background-color: #192A56; }'}</style>
+      </Helmet>
         <br />
         <br />
         <Container>
-          <h3>Sign Up</h3>
+          <h2 className="head">Sign Up</h2>
           <br />
           <br />
           <Form>
             <FormGroup>
-              <Label>Username</Label>
+              <Label className="head">UserID</Label>
               <Input
                 type="email"
-                placeholder="Enter Username"
+                placeholder="Enter UserID"
                 onChange={this.onChangeUserName}
               />
             </FormGroup>
             <FormGroup>
-              <Label>Password</Label>
+              <Label className="head">Password</Label>
               <Input
                 type="password"
                 placeholder="Password"
@@ -80,7 +85,7 @@ class Signup extends Component {
               />
             </FormGroup>
             <FormGroup>
-              <Label>Name</Label>
+              <Label className="head">Name</Label>
               <Input
                 type="text"
                 placeholder="Enter your name"
@@ -88,7 +93,7 @@ class Signup extends Component {
               />
             </FormGroup>
             <FormGroup>
-              <Label>Phone</Label>
+              <Label className="head">Phone</Label>
               <Input
                 type="text"
                 maxLength={10}

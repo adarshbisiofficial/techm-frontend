@@ -3,6 +3,9 @@ import _ from "lodash";
 import { Button, Form, Container, FormGroup, Label, Input } from "reactstrap";
 import axios from "axios";
 import qs from "querystring";
+import "./login.css";
+import {Helmet} from 'react-helmet';
+
 let axiosconfig = {
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -41,34 +44,39 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="login">
+      <Helmet>
+        <style>{'body { background-color: #192A56; }'}</style>
+      </Helmet>
         <br />
         <br />
         <Container>
-          <h3>Login</h3>
+          <h2 className="head">Login</h2>
           <br />
           <br />
           <Form>
             <FormGroup>
-              <Label>Username</Label>
+              <Label className="head">UserID</Label>
               <Input
                 type="email"
-                placeholder="Enter username"
+                className="input-line"
+                placeholder="Enter your ID"
                 onChange={this.onChangeUserName}
               />
             </FormGroup>
             <FormGroup>
-              <Label>Password</Label>
+              <Label className="head">Password</Label>
               <Input
                 type="password"
-                placeholder="Password"
+                placeholder="Enter the Password"
+                className="input-line"
                 onChange={this.onChangePassword}
               />
             </FormGroup>
             <Button color="success" onClick={this.onlogin}>
               Login
             </Button>
-            <div>{this.state.message}</div>
+            <div className="head">{this.state.message}</div>
           </Form>
           <br />
           <br />
