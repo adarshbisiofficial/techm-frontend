@@ -5,9 +5,9 @@ import Axios from "axios";
 import Admin from "../components/admin";
 import Staff from "../components/staff";
 import "./home.css";
-import {Jumbotron} from 'react-bootstrap';
+import {Jumbotron,Navbar} from 'react-bootstrap';
 //import {Image,Col,Row} from 'react-bootstrap';
-import {logo} from "../logo-resize.png";
+//import {logo} from "../logo-resize.png";
 
 let axiosconfig = {};
 
@@ -62,10 +62,11 @@ class Home extends Component {
             </div>
           ) : (
             <div>
-              <a className="btn btn-success" href="/login">
+              <a className="btn btn-primary" href="/login">
                 Login
               </a>{" "}
-              <a className="btn btn-warning" href="/signup">
+              <br/><br/>
+              <a className="btn btn-info" href="/signup">
                 Signup
               </a>
             </div>
@@ -74,7 +75,12 @@ class Home extends Component {
             <div>{user === "admin" ? <Admin /> : <Staff />}</div>
           ) : null}
         </Container>
-        <img src={logo} alt="logo"/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand href="#home">
+      {'© Scotiabank. All Rights Reserved'}
+    </Navbar.Brand>
+  </Navbar>
       </div>
     );
   }

@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
     <Helmet>
-      <style>{'body { background-color: red; }'}</style>
+      <style>{'body { background-color: #DAE0E2; }'}</style>
     </Helmet>
       <Container />
       <Router>

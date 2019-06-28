@@ -1,5 +1,5 @@
 h2{
-    color: #EAF0F1;
+    color: red;
     font-size: 100%;
 }
 h1{
@@ -8,5 +8,5 @@ h1{
     font-weight: 900;
 }
 .home{
-    background-color: red;
+    background-color: #DAE0E2;
 }
